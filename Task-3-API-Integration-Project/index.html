@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Profile Finder | Deepshikha</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-container">
+      <section class="finder-card">
+        <div class="header">
+          <p class="tagline">API Integration Project</p>
+          <h1>GitHub Profile Finder</h1>
+          <p class="subtitle">
+            Search any GitHub username and view public profile details
+            instantly.
+          </p>
+        </div>
+
+        <form id="search-form" class="search-form">
+          <input
+            type="text"
+            id="username-input"
+            placeholder="Enter GitHub username..."
+            autocomplete="off"
+          />
+          <button type="submit">Search</button>
+        </form>
+
+        <p id="message" class="message">
+          Type a GitHub username to fetch profile details.
+        </p>
+
+        <section id="profile-card" class="profile-card hidden">
+          <div class="profile-top">
+            <img id="avatar" src="" alt="GitHub user avatar" />
+
+            <div class="profile-info">
+              <h2 id="name">User Name</h2>
+              <p id="username">@username</p>
+              <p id="bio">User bio will appear here.</p>
+            </div>
+          </div>
+
+          <div class="stats">
+            <div>
+              <h3 id="repos">0</h3>
+              <p>Repositories</p>
+            </div>
+
+            <div>
+              <h3 id="followers">0</h3>
+              <p>Followers</p>
+            </div>
+
+            <div>
+              <h3 id="following">0</h3>
+              <p>Following</p>
+            </div>
+          </div>
+
+          <div class="extra-info">
+            <p>
+              <strong>Location:</strong>
+              <span id="location">Not available</span>
+            </p>
+            <p>
+              <strong>Company:</strong> <span id="company">Not available</span>
+            </p>
+            <p>
+              <strong>Joined:</strong>
+              <span id="joined-date">Not available</span>
+            </p>
+          </div>
+
+          <div class="repo-section">
+            <h3>Recent Repositories</h3>
+            <div id="repo-list" class="repo-list"></div>
+          </div>
+
+          <a id="profile-link" href="#" target="_blank" class="profile-btn">
+            View GitHub Profile
+          </a>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
