@@ -943,6 +943,7 @@
     .cert-container {
         grid-template-columns: 1fr;
     }
+    
 
     .cert-card {
         padding: 20px;

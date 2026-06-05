@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List App | Deepshikha</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-container">
+      <section class="todo-card">
+        <div class="header">
+          <p class="tagline">JavaScript Mini Project</p>
+          <h1>To-Do List App</h1>
+          <p class="subtitle">
+            Organize your daily study tasks and track your progress.
+          </p>
+        </div>
+
+        <div class="progress-area">
+          <div class="progress-text">
+            <span>Today’s Progress</span>
+            <strong id="progress-percent">0%</strong>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+        </div>
+
+        <form id="task-form" class="task-form">
+          <input
+            type="text"
+            id="task-input"
+            placeholder="Write your task..."
+            autocomplete="off"
+          />
+
+          <select id="category-input">
+            <option value="Study">Study</option>
+            <option value="Assignment">Assignment</option>
+            <option value="Project">Project</option>
+            <option value="Personal">Personal</option>
+          </select>
+
+          <select id="priority-input">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+
+          <input type="date" id="date-input" />
+
+          <button type="submit">Add Task</button>
+        </form>
+
+        <div class="stats">
+          <div>
+            <h3 id="total-tasks">0</h3>
+            <p>Total</p>
+          </div>
+
+          <div>
+            <h3 id="completed-tasks">0</h3>
+            <p>Completed</p>
+          </div>
+
+          <div>
+            <h3 id="pending-tasks">0</h3>
+            <p>Pending</p>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <input type="text" id="search-input" placeholder="Search task..." />
+
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="pending">Pending</button>
+            <button class="filter-btn" data-filter="completed">
+              Completed
+            </button>
+          </div>
+        </div>
+
+        <ul id="task-list" class="task-list"></ul>
+
+        <div class="bottom-actions">
+          <button id="clear-completed">Clear Completed</button>
+          <button id="clear-all">Clear All</button>
+        </div>
+
+        <p id="empty-message" class="empty-message">
+          No tasks added yet. Add your first task!
+        </p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
